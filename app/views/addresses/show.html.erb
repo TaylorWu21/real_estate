@@ -1,0 +1,16 @@
+<h1>Address of Home</h1>
+
+<hr />
+
+<h2><%= @address.street_name%>
+<br />
+<h2><%= @address.city %>, <%= @address.state %></h2>
+
+<hr />
+
+<%= link_to 'Edit', edit_seller_home_address_path(@seller, @home, @address) %>
+
+<%= link_to 'Delete', seller_home_address_path(@seller, @home, @address), method: :delete %>
+
+<%= link_to 'Back', seller_home_addresses_path(@seller, @home) %>
+

@@ -1,0 +1,19 @@
+<h1>Homes Sold By: <%= @seller.name %></h1>
+<hr />
+
+<% if @homes.any? %>
+	<ul>
+		<% @homes.each do |home| %>
+			<li><%= link_to home.price, seller_home_path(@seller, home) %>
+			</li>
+		</ul>
+		<% end %>
+<% else %>
+	<h3>No homes for sale.</h3>
+<% end %>
+
+<hr />
+
+<%= link_to 'Add new home to sell', new_seller_home_path(@seller) %>
+
+<%= link_to 'Back', seller_path(@seller) %>

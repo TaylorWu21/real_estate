@@ -1,0 +1,13 @@
+<%= form_for [@seller, @home, @address] do |f| %>
+
+	<%= f.label :street_name %>
+	<%= f.text_field :street_name %>
+
+	<%= f.label :city %>
+	<%= f.text_field :city %>
+
+	<%= f.label :state %>
+	<%= f.text_field :state %>
+
+	<%= f.submit %>
+<% end %>

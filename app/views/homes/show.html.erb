@@ -1,0 +1,20 @@
+<h1>Home</h1>
+
+<h2>Price: $<%= @home.price %>
+<h3>Sold: <%= @home.sold %></h3>
+
+<hr />
+
+<p>Square Feet: <%= @home.square_feet %></p>
+<p>Bathrooms: <%= @home.bathroom %></p>
+<p>Rooms: <%= @home.room %></p>
+
+<%= link_to 'Address For Home', seller_home_addresses_path(@seller, @home) %>
+
+<hr />
+
+<%= link_to 'Edit', edit_seller_home_path(@seller, @home) %>
+
+<%= link_to 'Delete', seller_home_path(@seller, @home), method: :delete %>
+
+<%= link_to "#{@seller.name}'s homes for sale", seller_homes_path(@seller) %>

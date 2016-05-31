@@ -1,0 +1,17 @@
+<%= form_for @seller do |f| %>
+	<%= f.label :name, 'Full Name: ' %>
+	<%= f.text_field :name %>
+
+	<%= f.label :phone_number, 'Phone Number: ' %>
+	<%= f.telephone_field :phone_number %>
+
+	<%= f.label :customer_rating, 'Customer Rating: ' %>
+	<%= f.select(:customer_rating) do %>
+		<% @options.each do |o| %>
+			<%= content_tag(:option, o.first, value: o.last) %>
+		<% end %>
+	<% end %>
+
+	<%= f.submit %>
+
+<% end %>

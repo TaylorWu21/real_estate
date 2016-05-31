@@ -1,0 +1,22 @@
+<%= form_for [@seller, @home] do |f| %>
+	<%= f.label :price %>
+	<%= f.number_field :price %>
+<br /><br />
+	<%= f.label :square_feet %>
+	<%= f.number_field :square_feet %>
+<br /><br />
+	<%= f.label :bathroom %>
+	<%= f.text_field :bathroom %>
+<br /><br />
+	<%= f.label :room %>
+	<%= f.text_field :room %>
+<br /><br />
+	<%= f.label :year_built %>
+	<%= f.text_field :year_built %>
+<br /><br />
+	<%= f.label :sold %>
+	<%= f.check_box :sold %>
+<br /><br />
+	<%= f.submit %>
+<br /><br />
+<% end %>

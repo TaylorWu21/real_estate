@@ -1,0 +1,16 @@
+<h1>Real Estate Agent: <%= @seller.name %></h1>
+<hr />
+
+<h3>Phone Number: <%= @seller.phone_number %></h3>
+
+<p>Customer Rating: <%= @seller.customer_rating %> Star</p>
+
+<%= link_to 'Homes For Sale', seller_homes_path(@seller) %>
+
+<hr />
+
+<%= link_to 'Edit', edit_seller_path(@seller) %>
+
+<%= link_to 'Delete', seller_path(@seller), method: :delete %>
+
+<%= link_to 'Back', sellers_path %>

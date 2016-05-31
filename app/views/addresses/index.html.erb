@@ -1,0 +1,9 @@
+<h1>Address of the Home</h1>
+
+<% if @addresses.blank? == false %>
+	<%= link_to 'Address', seller_home_address_path(@seller, @home, @addresses) %>
+<% else %>
+	<h3>No address found, Please add one.
+	<%= link_to 'New Address', new_seller_home_address_path(@seller, @home) %>
+<% end %>
+
