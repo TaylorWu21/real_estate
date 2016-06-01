@@ -8,8 +8,15 @@
 }
 
 .flash.success {
-	background-color: green;
+	background-color: #4080bf;
 	color: white;
 	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 
+.flash.notice {
+	background-color: red;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}

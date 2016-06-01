@@ -4,7 +4,7 @@
 <% if @homes.any? %>
 	<ul>
 		<% @homes.each do |home| %>
-			<li><%= link_to home.price, seller_home_path(@seller, home) %>
+			<li><h3><%= link_to home.title, seller_home_path(@seller, home) %></h3>
 			</li>
 		</ul>
 		<% end %>
@@ -14,6 +14,6 @@
 
 <hr />
 
-<%= link_to 'Add new home to sell', new_seller_home_path(@seller) %>
+<%= link_to 'Add new home to sell', new_seller_home_path(@seller), class:"btn btn-default" %>
 
-<%= link_to 'Back', seller_path(@seller) %>
+<%= link_to 'Back', seller_path(@seller), class:"btn btn-info" %>

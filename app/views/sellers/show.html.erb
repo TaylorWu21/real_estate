@@ -5,12 +5,12 @@
 
 <p>Customer Rating: <%= @seller.customer_rating %> Star</p>
 
-<%= link_to 'Homes For Sale', seller_homes_path(@seller) %>
+<%= link_to 'Homes For Sale', seller_homes_path(@seller), class:"btn btn-default" %>
 
 <hr />
 
-<%= link_to 'Edit', edit_seller_path(@seller) %>
+<%= link_to 'Edit', edit_seller_path(@seller), class:"btn btn-warning" %>
 
-<%= link_to 'Delete', seller_path(@seller), method: :delete %>
+<%= link_to 'Delete', seller_path(@seller), method: :delete, class:"btn btn-danger" %>
 
-<%= link_to 'Back', sellers_path %>
+<%= link_to 'Back', sellers_path, class:"btn btn-info" %>

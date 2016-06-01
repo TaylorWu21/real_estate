@@ -1,4 +1,4 @@
-<h1>Home</h1>
+<h1><%= @home.title %></h1>
 
 <h2>Price: $<%= @home.price %>
 <h3>Sold: <%= @home.sold %></h3>
@@ -9,12 +9,12 @@
 <p>Bathrooms: <%= @home.bathroom %></p>
 <p>Rooms: <%= @home.room %></p>
 
-<%= link_to 'Address For Home', seller_home_addresses_path(@seller, @home) %>
+<%= link_to 'Address For Home', seller_home_addresses_path(@seller, @home), class:"btn btn-default" %>
 
 <hr />
 
-<%= link_to 'Edit', edit_seller_home_path(@seller, @home) %>
+<%= link_to 'Edit', edit_seller_home_path(@seller, @home), class:"btn btn-warning" %>
 
-<%= link_to 'Delete', seller_home_path(@seller, @home), method: :delete %>
+<%= link_to 'Delete', seller_home_path(@seller, @home), method: :delete, class:"btn btn-danger" %>
 
-<%= link_to "#{@seller.name}'s homes for sale", seller_homes_path(@seller) %>
+<%= link_to "#{@seller.name}'s homes for sale", seller_homes_path(@seller), class:"btn btn-info" %>

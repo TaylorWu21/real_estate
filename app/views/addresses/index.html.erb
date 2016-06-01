@@ -1,9 +1,10 @@
-<h1>Address of the Home</h1>
+<h1>Address of <%= @home.title %></h1>
 
 <% if @addresses.blank? == false %>
 	<%= link_to 'Address', seller_home_address_path(@seller, @home, @addresses) %>
 <% else %>
-	<h3>No address found, Please add one.
-	<%= link_to 'New Address', new_seller_home_address_path(@seller, @home) %>
+	<h3>No address found, Please add one.</h3>
+	<%= link_to 'New Address', new_seller_home_address_path(@seller, @home), class:"btn btn-info" %>
 <% end %>
-
+<hr />
+<%= link_to 'Back', seller_home_path(@seller, @home), class:"btn btn-default" %>

@@ -4,12 +4,12 @@
 <ul>
 	<% @sellers.each do |seller| %>
 		<li>
-		<%= link_to seller.name, seller_path(seller) %>
+		<h3><%= link_to seller.name, seller_path(seller) %></h3>
 		</li>
 	<% end %>
 </ul>
 
 <hr />
 
-<%= link_to 'Create a new agent', new_seller_path %>
+<%= link_to 'Create a new agent', new_seller_path, class:"btn btn-default"%>
 
